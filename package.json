@@ -1,0 +1,50 @@
+{
+  "name": "standard-erc20",
+  "version": "1.0.0",
+  "description": "",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "lint": "eslint . && prettier -c .",
+    "lint:fix": "eslint --fix . && prettier -w .",
+    "clean": "rm -rf build .openzeppelin artifact",
+    "compile": "truffle compile --all ",
+    "build": "truffle build",
+    "test": "truffle test",
+    "deploy": "truffle compile --all && truffle migrate",
+    "verify": "truffle run verify"
+  },
+  "keywords": [],
+  "author": "Afa <ifundeasy@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "dotenv": "^16.0.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-promise": "^5.2.0",
+    "ganache": "^7.0.2",
+    "prettier": "^2.5.1",
+    "prettier-plugin-solidity": "^1.0.0-beta.19"
+  },
+  "dependencies": {
+    "@openzeppelin/cli": "^2.8.2",
+    "@openzeppelin/contracts": "^4.5.0",
+    "@openzeppelin/contracts-upgradeable": "^4.5.1",
+    "@openzeppelin/test-helpers": "^0.5.15",
+    "@openzeppelin/truffle-upgrades": "^1.12.0",
+    "@truffle/hdwallet-provider": "^2.0.3",
+    "ethers": "^5.5.4",
+    "solc": "^0.8.12",
+    "solidity-coverage": "^0.7.20",
+    "truffle": "^5.5.0",
+    "truffle-plugin-verify": "^0.5.21",
+    "web3": "^1.7.0"
+  }
+}

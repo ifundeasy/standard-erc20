@@ -1,0 +1,492 @@
+{
+  "contractName": "IPinkAntiBot",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        }
+      ],
+      "name": "setTokenOwner",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "onPreTransferCheck",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.9+commit.e5eed63a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"onPreTransferCheck\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"}],\"name\":\"setTokenOwner\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/IPinkAntiBot.sol\":\"IPinkAntiBot\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/IPinkAntiBot.sol\":{\"keccak256\":\"0x788e2b18e808657c546245b505e8423a62ed88282093b088ec9f39753411ed70\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://b961f7fe88bb0975df6d031454b6be1ffc928eb9a1e3b26f137ac22cd950d6f5\",\"dweb:/ipfs/QmPSKBjpZjfoFcb2RZhtiMdD2hXsNZTL9XmUvWeeTG46LR\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\n// Dependency file: contracts/interfaces/IPinkAntiBot.sol\n\n// pragma solidity >=0.5.0;\npragma solidity >=0.8.9;\n\ninterface IPinkAntiBot {\n  function setTokenOwner(address owner) external;\n\n  function onPreTransferCheck(\n    address from,\n    address to,\n    uint256 amount\n  ) external;\n}\n",
+  "sourcePath": "/Users/ifundeasy/Developer/dooit/sc-dooit/contracts/IPinkAntiBot.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/IPinkAntiBot.sol",
+    "exportedSymbols": {
+      "IPinkAntiBot": [
+        4040
+      ]
+    },
+    "id": 4041,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 4025,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.8",
+          ".9"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "119:24:9"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IPinkAntiBot",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 4040,
+        "linearizedBaseContracts": [
+          4040
+        ],
+        "name": "IPinkAntiBot",
+        "nameLocation": "155:12:9",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "18e02bd9",
+            "id": 4030,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setTokenOwner",
+            "nameLocation": "181:13:9",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4028,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4027,
+                  "mutability": "mutable",
+                  "name": "owner",
+                  "nameLocation": "203:5:9",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4030,
+                  "src": "195:13:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4026,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "195:7:9",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "194:15:9"
+            },
+            "returnParameters": {
+              "id": 4029,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "218:0:9"
+            },
+            "scope": 4040,
+            "src": "172:47:9",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "48760858",
+            "id": 4039,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "onPreTransferCheck",
+            "nameLocation": "232:18:9",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4037,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4032,
+                  "mutability": "mutable",
+                  "name": "from",
+                  "nameLocation": "264:4:9",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4039,
+                  "src": "256:12:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4031,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "256:7:9",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4034,
+                  "mutability": "mutable",
+                  "name": "to",
+                  "nameLocation": "282:2:9",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4039,
+                  "src": "274:10:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4033,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "274:7:9",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4036,
+                  "mutability": "mutable",
+                  "name": "amount",
+                  "nameLocation": "298:6:9",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4039,
+                  "src": "290:14:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 4035,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "290:7:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "250:58:9"
+            },
+            "returnParameters": {
+              "id": 4038,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "317:0:9"
+            },
+            "scope": 4040,
+            "src": "223:95:9",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 4041,
+        "src": "145:175:9",
+        "usedErrors": []
+      }
+    ],
+    "src": "119:202:9"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/IPinkAntiBot.sol",
+    "exportedSymbols": {
+      "IPinkAntiBot": [
+        4040
+      ]
+    },
+    "id": 4041,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 4025,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.8",
+          ".9"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "119:24:9"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IPinkAntiBot",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 4040,
+        "linearizedBaseContracts": [
+          4040
+        ],
+        "name": "IPinkAntiBot",
+        "nameLocation": "155:12:9",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "18e02bd9",
+            "id": 4030,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setTokenOwner",
+            "nameLocation": "181:13:9",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4028,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4027,
+                  "mutability": "mutable",
+                  "name": "owner",
+                  "nameLocation": "203:5:9",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4030,
+                  "src": "195:13:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4026,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "195:7:9",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "194:15:9"
+            },
+            "returnParameters": {
+              "id": 4029,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "218:0:9"
+            },
+            "scope": 4040,
+            "src": "172:47:9",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "48760858",
+            "id": 4039,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "onPreTransferCheck",
+            "nameLocation": "232:18:9",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4037,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4032,
+                  "mutability": "mutable",
+                  "name": "from",
+                  "nameLocation": "264:4:9",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4039,
+                  "src": "256:12:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4031,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "256:7:9",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4034,
+                  "mutability": "mutable",
+                  "name": "to",
+                  "nameLocation": "282:2:9",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4039,
+                  "src": "274:10:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4033,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "274:7:9",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4036,
+                  "mutability": "mutable",
+                  "name": "amount",
+                  "nameLocation": "298:6:9",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4039,
+                  "src": "290:14:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 4035,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "290:7:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "250:58:9"
+            },
+            "returnParameters": {
+              "id": 4038,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "317:0:9"
+            },
+            "scope": 4040,
+            "src": "223:95:9",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 4041,
+        "src": "145:175:9",
+        "usedErrors": []
+      }
+    ],
+    "src": "119:202:9"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.9+commit.e5eed63a.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.4",
+  "updatedAt": "2022-02-12T22:42:53.051Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

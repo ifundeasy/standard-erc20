@@ -1,0 +1,9 @@
+.openzeppelin
+artifacts
+build
+coverage
+node_modules
+package.json
+package-lock.json
+target
+trash
