@@ -1,0 +1,108 @@
+{
+  "manifestVersion": "3.2",
+  "admin": {
+    "address": "0x5229d03a35F6aa72491451DCd4c96f1d41E9bdb6",
+    "txHash": "0xee6e00e718f91ae7ee748dc1b02ae1f79fff21e912d57f4c5a236d65ee9e8f75"
+  },
+  "proxies": [
+    {
+      "address": "0x6777D958872f11b59b557F9bC1C3B0C6203200d9",
+      "txHash": "0x8aa3c08b2c9d47ff010e36f948594bbb1585ff0a79335346fe4a204a30f47a76",
+      "kind": "transparent"
+    }
+  ],
+  "impls": {
+    "c365b93f914ede1b7c474f5b9c603b306414accc7e8be45c8ccbe121a9d3f54a": {
+      "address": "0x24cC903e598ab6c9597F81A93b0A4Fa50f11bB00",
+      "txHash": "0xb9da3c53c35a1a0ee540fd0692f5d0d74455c607ef15fb793bfe7b980cea91db",
+      "layout": {
+        "storage": [
+          {
+            "contract": "Initializable",
+            "label": "_initialized",
+            "type": "t_uint8",
+            "src": "../@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "contract": "Initializable",
+            "label": "_initializing",
+            "type": "t_bool",
+            "src": "../@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:67"
+          },
+          {
+            "contract": "ContextUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)50_storage",
+            "src": "../@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol:36"
+          },
+          {
+            "contract": "PattyCoin",
+            "label": "_balances",
+            "type": "t_mapping(t_address,t_uint256)",
+            "src": "../project:/contracts/PattyCoin.sol:37"
+          },
+          {
+            "contract": "PattyCoin",
+            "label": "_allowances",
+            "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+            "src": "../project:/contracts/PattyCoin.sol:39"
+          },
+          {
+            "contract": "PattyCoin",
+            "label": "_totalSupply",
+            "type": "t_uint256",
+            "src": "../project:/contracts/PattyCoin.sol:41"
+          },
+          {
+            "contract": "PattyCoin",
+            "label": "_name",
+            "type": "t_string_storage",
+            "src": "../project:/contracts/PattyCoin.sol:42"
+          },
+          {
+            "contract": "PattyCoin",
+            "label": "_symbol",
+            "type": "t_string_storage",
+            "src": "../project:/contracts/PattyCoin.sol:43"
+          },
+          {
+            "contract": "PattyCoin",
+            "label": "__gap",
+            "type": "t_array(t_uint256)45_storage",
+            "src": "../project:/contracts/PattyCoin.sol:386"
+          }
+        ],
+        "types": {
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)"
+          },
+          "t_address": {
+            "label": "address"
+          },
+          "t_uint256": {
+            "label": "uint256"
+          },
+          "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+            "label": "mapping(address => mapping(address => uint256))"
+          },
+          "t_string_storage": {
+            "label": "string"
+          },
+          "t_array(t_uint256)45_storage": {
+            "label": "uint256[45]"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]"
+          },
+          "t_uint8": {
+            "label": "uint8"
+          },
+          "t_bool": {
+            "label": "bool"
+          }
+        }
+      }
+    }
+  }
+}

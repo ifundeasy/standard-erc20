@@ -3,8 +3,9 @@ const { LOCAL_RPC_PORT, MAINNET_RPC_URL, MAINNET_BLOCK_NUM } = process.env
 
 const ganache = require('ganache')
 // const { toBN } = require('web3').utils
+const Account = require('./config/accounts.js')
 
-const accounts = require('./config/accounts.js').dev.map((account) => {
+const accounts = Account.test.map((account) => {
   return { secretKey: '0x' + account, balance: 10000000000000000000000 }
 })
 const option = {
@@ -24,6 +25,4 @@ server.listen(option.port, async (err) => {
   const provider = server.provider
   const accounts = await provider.request({ method: 'eth_accounts', params: [] })
   console.log(accounts)
-
-  // todo: how to logging PK?
 })

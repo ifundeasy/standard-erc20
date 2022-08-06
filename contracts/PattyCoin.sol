@@ -33,7 +33,7 @@ import '@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol';
  * functions have been added to mitigate the well-known issues around setting
  * allowances. See {IERC20-approve}.
  */
-contract ERC20Upgradeable is Initializable, ContextUpgradeable, IERC20Upgradeable, IERC20MetadataUpgradeable {
+contract PattyCoin is Initializable, ContextUpgradeable, IERC20Upgradeable, IERC20MetadataUpgradeable {
   mapping(address => uint256) private _balances;
 
   mapping(address => mapping(address => uint256)) private _allowances;
@@ -54,28 +54,34 @@ contract ERC20Upgradeable is Initializable, ContextUpgradeable, IERC20Upgradeabl
   function initialize(
     string memory name_,
     string memory symbol_,
-    uint256 totalSupply_
+    uint256 totalSupply_,
+    address owner_
   ) public initializer {
-    __ERC20_init(name_, symbol_, totalSupply_);
+    __ERC20_init(name_, symbol_, totalSupply_, owner_);
   }
 
   function __ERC20_init(
     string memory name_,
     string memory symbol_,
-    uint256 totalSupply_
+    uint256 totalSupply_,
+    address owner_
   ) internal onlyInitializing {
     __Context_init_unchained();
-    __ERC20_init_unchained(name_, symbol_, totalSupply_);
+    __ERC20_init_unchained(name_, symbol_, totalSupply_, owner_);
   }
 
   function __ERC20_init_unchained(
     string memory name_,
     string memory symbol_,
-    uint256 totalSupply_
+    uint256 totalSupply_,
+    address owner_
   ) internal onlyInitializing {
     _name = name_;
     _symbol = symbol_;
     _totalSupply = totalSupply_;
+    _balances[owner_] = _totalSupply;
+
+    emit Transfer(address(0), owner_, _totalSupply);
   }
 
   /**

@@ -1,6 +1,6 @@
 # standard-erc20
 
-For deployed contract, refer [CONTRACT.md](CONTRACT.md)
+For deployed contract, refer [Logs](logs)
 
 ## Installation
 
@@ -21,27 +21,24 @@ vi config/accounts.js # edit as you need
 
 ```sh
 # reformat code
-npm run pretty
+npm run lint:fix
 
-# init project
-npm run clean && npm run init
-
-# compile contract
-npm run compile
+# clean project
+npm run clean
 
 # build contract
 npm run build
 
+# compile project
+npm run compile
+
 # testing contract
-npm run test
+npm run test -- --network 'mocha'
 
 # deploy or upgrade contract, using truffle moudule
-npm run deploy -- --network dev
-
-# deploy contract with remix
-npm run deploy:remix
+npm run deploy -- --network 'local'
 
 # collect .sol file to verification
 # don't forget to fill file references in config/contract-map.js
-node script/verification.js
+npm run verify -- ContractA OtherContract --network 'test'
 ```

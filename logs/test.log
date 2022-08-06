@@ -1,0 +1,244 @@
+$ npm run deploy -- --network 'test'
+
+> standard-erc20@1.0.0 deploy
+> truffle compile --all && truffle migrate "--network" "test"
+
+
+Compiling your contracts...
+===========================
+> Compiling ./contracts/IERC20.sol
+> Compiling ./contracts/KrabbyCoin.sol
+> Compiling ./contracts/Migrations.sol
+> Compiling ./contracts/PattyCoin.sol
+> Compiling @openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol
+> Compiling @openzeppelin/contracts-upgradeable/token/ERC20/IERC20Upgradeable.sol
+> Compiling @openzeppelin/contracts-upgradeable/token/ERC20/extensions/IERC20MetadataUpgradeable.sol
+> Compiling @openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol
+> Compiling @openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol
+> Compiling @openzeppelin/contracts/access/Ownable.sol
+> Compiling @openzeppelin/contracts/utils/Context.sol
+> Compiling @openzeppelin/contracts/utils/math/SafeMath.sol
+> Artifacts written to /Users/ifundeasy/Developer/swapsy/standard-erc20/build/contracts
+> Compiled successfully using:
+   - solc: 0.8.9+commit.e5eed63a.Emscripten.clang
+
+Compiling your contracts...
+===========================
+> Everything is up to date, there is nothing to compile.
+
+
+Migrations dry-run (simulation)
+===============================
+> Network name:    'test-fork'
+> Network id:      3
+> Block gas limit: 30000000 (0x1c9c380)
+
+
+1_initial_migration.js
+======================
+
+   Deploying 'Migrations'
+   ----------------------
+   > block number:        12732670
+   > block timestamp:     1659787239
+   > account:             0x81e9064e979D0Af2700C7f28DAf22FdBA12cc93d
+   > balance:             37.421430972647229949
+   > gas used:            155222 (0x25e56)
+   > gas price:           2.500000007 gwei
+   > value sent:          0 ETH
+   > total cost:          0.000388055001086554 ETH
+
+@ migration: Migrations deployed.
+@ migration verification: Don't forget to verify with run this command
+  npm run verify -- Migrations --network test-fork -D
+   -------------------------------------
+   > Total cost:     0.000388055001086554 ETH
+
+
+2_initial_pattycoin.js
+======================
+@ initializer params: {
+  'string memory name_': 'WalshLlc',
+  'string memory symbol_': 'WL',
+  'uint256 totalSupply_': '0xd3c21bcecceda1000000',
+  'address owner_': '0x81e9064e979D0Af2700C7f28DAf22FdBA12cc93d'
+}
+
+   Deploying 'PattyCoin'
+   ---------------------
+   > block number:        12732672
+   > block timestamp:     1659787248
+   > account:             0x81e9064e979D0Af2700C7f28DAf22FdBA12cc93d
+   > balance:             37.419384272641499189
+   > gas used:            772990 (0xbcb7e)
+   > gas price:           2.500000007 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00193247500541093 ETH
+
+
+   Deploying 'ProxyAdmin'
+   ----------------------
+   > block number:        12732673
+   > block timestamp:     1659787252
+   > account:             0x81e9064e979D0Af2700C7f28DAf22FdBA12cc93d
+   > balance:             37.418174222638111049
+   > gas used:            484020 (0x762b4)
+   > gas price:           2.500000007 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00121005000338814 ETH
+
+
+   Deploying 'TransparentUpgradeableProxy'
+   ---------------------------------------
+   > block number:        12732674
+   > block timestamp:     1659787262
+   > account:             0x81e9064e979D0Af2700C7f28DAf22FdBA12cc93d
+   > balance:             37.41638800513310964
+   > gas used:            714487 (0xae6f7)
+   > gas price:           2.500000007 gwei
+   > value sent:          0 ETH
+   > total cost:          0.001786217505001409 ETH
+
+@ migration: PattyCoin proxy deployed.
+@ migration verification: Don't forget to verify with run this command
+  npm run verify -- PattyCoin --network test-fork -D
+   -------------------------------------
+   > Total cost:     0.004928742513800479 ETH
+
+
+3_pattycoin_postscript.js
+=========================
+@ transfer params: {
+  'address recipient': '0xb04FE4052bD076eC667B501dE4d20BCBD7C6De56',
+  'uint256 amount': '0x3635c9adc5dea00000'
+}
+@ balance before 0x81e9064e979D0Af2700C7f28DAf22FdBA12cc93d: 1000000000000000000000000
+@ balance before 0xb04FE4052bD076eC667B501dE4d20BCBD7C6De56: 0
+@ balance after  0x81e9064e979D0Af2700C7f28DAf22FdBA12cc93d: 999000000000000000000000
+@ balance after  0xb04FE4052bD076eC667B501dE4d20BCBD7C6De56: 1000000000000000000000
+@ migration: PattyCoin post script deployed.
+   -------------------------------------
+   > Total cost:                   0 ETH
+
+Summary
+=======
+> Total deployments:   4
+> Final cost:          0.005316797514887033 ETH
+
+
+
+
+Starting migrations...
+======================
+> Network name:    'test'
+> Network id:      3
+> Block gas limit: 30000000 (0x1c9c380)
+
+
+1_initial_migration.js
+======================
+
+   Deploying 'Migrations'
+   ----------------------
+   > transaction hash:    0x81280d7d165eb66d111d6200db0000bd02966e754c5c3ce70c9c24203ae3b5fc
+   > Blocks: 2            Seconds: 25
+   > contract address:    0x08b861FE8D899027e8958Da958ee76aC4Bab7230
+   > block number:        12732678
+   > block timestamp:     1659787296
+   > account:             0x81e9064e979D0Af2700C7f28DAf22FdBA12cc93d
+   > balance:             37.421430972647229949
+   > gas used:            155222 (0x25e56)
+   > gas price:           2.500000007 gwei
+   > value sent:          0 ETH
+   > total cost:          0.000388055001086554 ETH
+
+@ migration: Migrations deployed.
+@ migration verification: Don't forget to verify with run this command
+  npm run verify -- Migrations --network test -D
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:     0.000388055001086554 ETH
+
+
+2_initial_pattycoin.js
+======================
+@ initializer params: {
+  'string memory name_': 'DonnellyGroup',
+  'string memory symbol_': 'DG',
+  'uint256 totalSupply_': '0xd3c21bcecceda1000000',
+  'address owner_': '0x81e9064e979D0Af2700C7f28DAf22FdBA12cc93d'
+}
+
+   Deploying 'PattyCoin'
+   ---------------------
+   > transaction hash:    0xb9da3c53c35a1a0ee540fd0692f5d0d74455c607ef15fb793bfe7b980cea91db
+   > Blocks: 2            Seconds: 21
+   > contract address:    0x24cC903e598ab6c9597F81A93b0A4Fa50f11bB00
+   > block number:        12732684
+   > block timestamp:     1659787368
+   > account:             0x81e9064e979D0Af2700C7f28DAf22FdBA12cc93d
+   > balance:             37.419384272641499189
+   > gas used:            772990 (0xbcb7e)
+   > gas price:           2.500000007 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00193247500541093 ETH
+
+
+   Deploying 'ProxyAdmin'
+   ----------------------
+   > transaction hash:    0xee6e00e718f91ae7ee748dc1b02ae1f79fff21e912d57f4c5a236d65ee9e8f75
+   > Blocks: 2            Seconds: 26
+   > contract address:    0x5229d03a35F6aa72491451DCd4c96f1d41E9bdb6
+   > block number:        12732687
+   > block timestamp:     1659787404
+   > account:             0x81e9064e979D0Af2700C7f28DAf22FdBA12cc93d
+   > balance:             37.418174222638111049
+   > gas used:            484020 (0x762b4)
+   > gas price:           2.500000007 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00121005000338814 ETH
+
+
+   Deploying 'TransparentUpgradeableProxy'
+   ---------------------------------------
+   > transaction hash:    0x8aa3c08b2c9d47ff010e36f948594bbb1585ff0a79335346fe4a204a30f47a76
+   > Blocks: 1            Seconds: 33
+   > contract address:    0x6777D958872f11b59b557F9bC1C3B0C6203200d9
+   > block number:        12732689
+   > block timestamp:     1659787452
+   > account:             0x81e9064e979D0Af2700C7f28DAf22FdBA12cc93d
+   > balance:             37.41638785513310922
+   > gas used:            714547 (0xae733)
+   > gas price:           2.500000007 gwei
+   > value sent:          0 ETH
+   > total cost:          0.001786367505001829 ETH
+
+@ migration: PattyCoin proxy deployed.
+@ migration verification: Don't forget to verify with run this command
+  npm run verify -- PattyCoin --network test -D
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:     0.004928892513800899 ETH
+
+
+3_pattycoin_postscript.js
+=========================
+@ transfer params: {
+  'address recipient': '0xb04FE4052bD076eC667B501dE4d20BCBD7C6De56',
+  'uint256 amount': '0x3635c9adc5dea00000'
+}
+@ balance before 0x81e9064e979D0Af2700C7f28DAf22FdBA12cc93d: 1000000000000000000000000
+@ balance before 0xb04FE4052bD076eC667B501dE4d20BCBD7C6De56: 0
+@ balance after  0x81e9064e979D0Af2700C7f28DAf22FdBA12cc93d: 999000000000000000000000
+@ balance after  0xb04FE4052bD076eC667B501dE4d20BCBD7C6De56: 1000000000000000000000
+@ migration: PattyCoin post script deployed.
+   > Saving migration to chain.
+   -------------------------------------
+   > Total cost:                   0 ETH
+
+Summary
+=======
+> Total deployments:   4
+> Final cost:          0.005316947514887453 ETH

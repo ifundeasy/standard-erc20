@@ -6,7 +6,7 @@ import './IERC20.sol';
 import '@openzeppelin/contracts/access/Ownable.sol';
 import '@openzeppelin/contracts/utils/math/SafeMath.sol';
 
-contract ERC20 is Context, IERC20, Ownable {
+contract KrabbyCoin is Context, IERC20, Ownable {
   using SafeMath for uint256;
 
   mapping(address => uint256) private _balances;
